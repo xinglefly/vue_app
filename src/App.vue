@@ -14,6 +14,5 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
-  font-size: 16px;
 }
 </style>

@@ -1,0 +1,19 @@
+@import './vars/size.styl'
+@import './vars/colors.styl' 
+
+*
+  margin: 0
+  padding: 0
+  list-style: none
+  box-sizing: border-box
+  font-size: $size32
+::-webkit-scrollbar
+  display none  
+html
+  min-height: 100%
+body
+  min-height: 100%
+  padding-top: env(safe-area-inset-top)
+  padding-left: constant(safe-area-inset-left)
+  padding-right: constant(safe-area-inset-right)
+  padding-bottom: env(safe-area-inset-bottom)    

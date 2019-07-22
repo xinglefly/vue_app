@@ -1,8 +1,32 @@
-const { resolve } = require('path')
+const path = require('path')
+const poststylus = require('poststylus')
+const pxtorem = require('postcss-pxtorem')
+
+const resolve = file => path.resolve(__dirname, file)
 
 module.exports = {
   publicPath: '',
   assetsDir: '',
+  css: {
+    loaderOptions: {
+      stylus: {
+        use: [
+          poststylus([
+            pxtorem({
+              rootValue: 100,
+              propWhiteList: [],
+              minPixelValue: 1,
+              unitPrecision: 2
+            }),
+            'autoprefixer'
+          ])
+        ],
+        import: [
+          // resolve('./src/assets/theme.custom')
+        ]
+      }
+    }
+  },
   chainWebpack: (config) => {
     config.resolve.alias
       .set('assets', resolve('src/assets'))
