@@ -1,0 +1,30 @@
+@import '../vars/size.styl'
+@import '../vars/colors.styl'
+
+.portal
+  height 100%
+  width 100%
+  overflow hidden
+  display flex
+  flex-direction column
+.footer-bar
+  padding-top 5px
+  height 47px
+  position fixed
+  bottom 0
+  left 0
+  right 0
+  box-shadow 0 -4px 10px rgba(0, 0, 0, 0.04)
+  background #fff
+  .nav-item
+    p
+      margin 0
+    &.active
+      color #2da94f
+    .nav-name
+      font-size 14px
+      // padding-top 5px
+    .nav-icon
+      .iconfont
+        transition .3s
+        font-size 16Px

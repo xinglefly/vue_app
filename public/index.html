@@ -3,14 +3,54 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>vue_app</title>
+    <title>集团经营看板</title>
+    <!-- safira 浏览器相关的meta设置 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="CHINAPOST">
+    <!-- wphone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 常用meta -->
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="description" content="Design by Chinpost&Asiainfo - KicFeTeam">
+    <meta name="keywords" content="Design by Chinpost&Asiainfo - KicFeTeam">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <!-- iOS不展示 iframe -->
+    <meta http-equiv="Content-Security-Policy" content="default-src *;frame-src *;style-src * 'self' 'unsafe-inline' 'unsafe-eval'; 
+      script-src * 'self' 'unsafe-inline' 'unsafe-eval';">
   </head>
+  <script>
+    (function(window, document) {
+      function resize() {
+        var ww = window.innerWidth
+        console.log(ww, window.screen.width)
+        if (ww > window.screen.width) {
+          if (ww > 750) {
+            ww = 750
+          }
+          document.documentElement.style.fontSize = ww * 100 / 750 + 'px'
+          window.requestAnimationFrame(resize)
+        } else {
+          if (ww > 750) {
+            ww = 750
+          }
+          document.documentElement.style.fontSize = ww * 100 / 750 + 'px'
+        }
+      }
+
+      resize();
+
+      window.addEventListener('resize', resize);
+      window.addEventListener('pageshow', function (e) {
+        if (e.presisted) {
+          resize();
+        }
+      });
+    })(window, document);
+  </script>
   <body>
-    <noscript>
-      <strong>We're sorry but vue_app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import axios from 'axios'
 import config from './axios.config'
-import store from '../store'
+import store from '../store/store.js'
 
 /**
  * 深度合并多个对象，返回合并后的新对象
