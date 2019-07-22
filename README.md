@@ -27,3 +27,12 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### npm install plugin
+eslint
+vuex
+vue-router
+axios
+stylus
+postcss
