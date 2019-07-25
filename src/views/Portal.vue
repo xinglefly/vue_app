@@ -29,12 +29,16 @@ import Index from './Index'
 import TopClient from './TopClient'
 import WarningClient from './WarningClient'
 import LeaveClient from './LeaveClient'
+import Plate from './Plate'
+import MarketingCampaign from './MarketingCampaign'
+import Mine from './Mine'
+
 
 const PREFIX = 'portal'
 
 export default {
   components: {
-    Index, TopClient, WarningClient, LeaveClient
+    Index, TopClient, WarningClient, LeaveClient, Plate, MarketingCampaign, Mine
   },
   computed: {
     ...mapState({

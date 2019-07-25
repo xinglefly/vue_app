@@ -20,22 +20,22 @@ export default new Vuex.Store({
         active: true
       },
       {
-        name: 'TOP客户',
-        type: 'TopClient',
+        name: '板块',
+        type: 'Plate',
         iconfont: 'icon-kehu',
         iconfontAct: 'icon-kehu_s',
         active: false
       },
       {
-        name: '预警客户',
-        type: 'WarningClient',
+        name: '营销活动',
+        type: 'MarketingCampaign',
         iconfont: 'icon-chanpin1',
         iconfontAct: 'icon-chanpin_s',
         active: false
       },
       {
-        name: '流失客户',
-        type: 'LeaveClient',
+        name: '我的',
+        type: 'Mine',
         iconfont: 'icon-wode1',
         iconfontAct: 'icon-Shape',
         active: false
