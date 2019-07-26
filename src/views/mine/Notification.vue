@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       prefix: PREFIX,
-      styleObj:{
+      styleObj: {
         backgroundColor: '#fff',
         color: 'black'
       }

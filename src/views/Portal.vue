@@ -62,10 +62,7 @@ export default {
   mounted() {
     document.getElementById('footerBar').addEventListener('touchmove', (e) => {
       e.preventDefault()
-    }, {
-        passive: false
-      })
+    }, { passive: false })
   }
 }
 </script>
-

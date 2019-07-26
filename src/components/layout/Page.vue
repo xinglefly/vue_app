@@ -30,7 +30,7 @@ export default {
       prefix: PREFIX
     }
   },
-  created(){
+  created() {
     // console.log(styleObj)
   },
   methods: {
@@ -42,22 +42,18 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.page {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  overflow: hidden;
-
-  .contents {
-    flex: 1;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    display: flex;
-    flex-direction: column;
-  }
-}
+.page
+  display flex
+  flex-direction column
+  width 100%
+  height 100%
+  text-align left
+  overflow hidden
+  .contents
+    flex 1
+    overflow-x hidden
+    overflow-y scroll
+    -webkit-overflow-scrolling touch
+    display flex
+    flex-direction column
 </style>
-

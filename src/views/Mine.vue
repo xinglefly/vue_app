@@ -26,6 +26,7 @@
 
 <script>
 import headerImg from 'assets/img/avatar.png'
+
 const PREFIX = 'mine'
 
 export default {
@@ -44,4 +45,3 @@ export default {
   }
 }
 </script>
-

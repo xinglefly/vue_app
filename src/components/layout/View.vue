@@ -27,19 +27,17 @@ export default {
 <style lang="stylus">
 .child-view
   position absolute
-  transition transform .4s cubic-bezier(.55,0,.1,1)
+  transition transform 0.4s cubic-bezier(0.55, 0, 0.1, 1)
   top 0
   bottom 0
   left 0
   right 0
   background #fff
   will-change transform
-.slide-left-enter,
-.slide-right-leave-active
+.slide-left-enter, .slide-right-leave-active
   transform translate3D(100%, 0, 0)
   z-index 1
-.slide-left-leave-active,
-.slide-right-enter
+.slide-left-leave-active, .slide-right-enter
   transform translate3D(-50px, 0, 0)
   z-index -1
 </style>

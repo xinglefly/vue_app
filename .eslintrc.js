@@ -4,7 +4,8 @@ module.exports = {
     node: true
   },
   extends: [
-    'plugin:vue/essential'
+    'plugin:vue/essential',
+    '@vue/airbnb'
   ],
   rules: {
     'consistent-return': 'off',

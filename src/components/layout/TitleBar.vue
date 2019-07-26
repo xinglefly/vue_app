@@ -23,7 +23,6 @@
 </template>
 
 <script>
-
 const PREFIX = 'title-bar'
 
 export default {
@@ -68,37 +67,27 @@ export default {
   }
 }
 </script>
-
 <style lang="stylus" scoped>
-@import '../../assets/styles/vars/colors.styl';
-@import '../../assets/styles/vars/size.styl';
-
-.title-bar {
-  width: 100%;
-  height: 88px;
-  line-height: 88px;
-  font-size: $size32;
-  text-align: center;
+@import '../../assets/styles/vars/colors.styl'
+@import '../../assets/styles/vars/size.styl'
+.title-bar
+  width 100%
+  height 88px
+  line-height 88px
+  font-size $size32
+  text-align center
   // background-color: $brand_color;
   // color: $color-white;
-  justify-content: center;
-  position: relative;
-
-  .title-bar-left, .title-bar-right {
-    width: 100px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-  }
-
-  .title-bar-left {
-    left: 0;
-  }
-
-  .title-bar-right {
-    right: 0;
-  }
-}
+  justify-content center
+  position relative
+  .title-bar-left, .title-bar-right
+    width 100px
+    height 100%
+    position absolute
+    top 0
+    bottom 0
+  .title-bar-left
+    left 0
+  .title-bar-right
+    right 0
 </style>
-
