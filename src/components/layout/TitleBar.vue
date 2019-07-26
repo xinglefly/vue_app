@@ -59,7 +59,8 @@ export default {
   methods: {
     emitParent(e, type) {
       if (type === 'left' && this.leftArea === 'icon-xiangzuo2') {
-        this.$router.back()
+        // console.log('router->', this.$router)
+        this.$router.goBack()
         return
       }
       this.$emit(`click-titlebar-${type}`)

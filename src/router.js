@@ -4,6 +4,11 @@ import View from 'components/layout/View'
 import Portal from 'views/Portal'
 import mine from 'views/mine/routers'
 
+Router.prototype.goBack = function goBack(backStep) {
+  this.isBack = true
+  window.history.go(backStep || -1)
+}
+
 Vue.use(Router)
 
 export default new Router({
