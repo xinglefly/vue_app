@@ -7,6 +7,7 @@ const resolve = file => path.resolve(__dirname, file)
 module.exports = {
   publicPath: '',
   assetsDir: '',
+  
   css: {
     loaderOptions: {
       stylus: {
@@ -46,6 +47,11 @@ module.exports = {
         target: 'https://www.easy-mock.com',
         changeOrigin: true
       }
+    },
+    overlay: {
+      warnings: true,
+      errors: true
     }
-  }
+  },
+  lintOnSave: process.env.NODE_ENV !== 'production'
 }
