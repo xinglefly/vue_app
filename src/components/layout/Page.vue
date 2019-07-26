@@ -1,6 +1,7 @@
 <template>
   <div :class="prefix">
     <title-bar
+      :styleObj="styleObj"
       :title="title"
       :leftArea="leftArea"
       :rightArea="rightArea"
@@ -19,6 +20,7 @@ const PREFIX = 'page'
 export default {
   name: 'page',
   props: {
+    styleObj: Object,
     title: String,
     leftArea: String,
     rightArea: String
@@ -27,6 +29,9 @@ export default {
     return {
       prefix: PREFIX
     }
+  },
+  created(){
+    // console.log(styleObj)
   },
   methods: {
     clickTitleBar(type) {

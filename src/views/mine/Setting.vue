@@ -1,6 +1,6 @@
 <template>
   <div :class="prefix">
-    <page title="设置">
+    <page :styleObj="styleObj" title="设置">
       <template v-slot:contents>
         <p>This the setting!</p>
       </template>
@@ -14,7 +14,11 @@ const PREFIX = 'setting'
 export default {
   data() {
     return {
-      prefix: PREFIX
+      prefix: PREFIX,
+      styleObj:{
+        backgroundColor: '#fff',
+        color: 'black'
+      }
     }
   }
 }

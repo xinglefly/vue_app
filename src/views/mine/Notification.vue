@@ -1,6 +1,6 @@
 <template>
   <div :class="prefix">
-    <page title="通知" rightArea="icon-kehujingli" @click-titlebar-right="goTo">
+    <page :styleObj="styleObj" title="通知" rightArea="icon-kehujingli" @click-titlebar-right="goTo">
       <template v-slot:contents>
         <div>
           <p>The notification!</p>
@@ -15,11 +15,15 @@ const PREFIX = 'notification'
 export default {
   data() {
     return {
-      prefix: PREFIX
+      prefix: PREFIX,
+      styleObj:{
+        backgroundColor: '#fff',
+        color: 'black'
+      }
     }
   },
   methods: {
-    goTo(){
+    goTo() {
       this.$router.push({
         name: 'Setting'
       })

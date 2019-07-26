@@ -1,5 +1,5 @@
 <template>
-  <div :class="prefix">
+  <div :class="prefix" :style="styleObj">
     <div class="title-bar-left">
       <i
         v-if="leftArea.length && leftArea.includes('icon')"
@@ -29,6 +29,16 @@ const PREFIX = 'title-bar'
 export default {
   name: 'title-bar',
   props: {
+    styleObj: {
+      type: Object,
+      default() {
+        return {
+          background: 'linear-gradient(338.21deg, #3AAD68 0%, #3AB542 100%)',
+          fontSize: '18px',
+          color: '#fff'
+        }
+      }
+    },
     title: {
       type: String,
       default: ''
@@ -69,8 +79,8 @@ export default {
   line-height: 88px;
   font-size: $size32;
   text-align: center;
-  background-color: $brand_color;
-  color: $color-white;
+  // background-color: $brand_color;
+  // color: $color-white;
   justify-content: center;
   position: relative;
 
