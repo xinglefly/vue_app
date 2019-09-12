@@ -39,7 +39,7 @@ module.exports = {
   },
   devServer: {
     proxy: {
-      '/appserver': {
+      '/base': {
         target: 'http://192.168.248.16:8080',
         changeOrigin: true
       },

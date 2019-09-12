@@ -40,6 +40,10 @@ export default {
   components: {
     Index, TopClient, WarningClient, LeaveClient, Plate, MarketingCampaign, Mine
   },
+  created() {
+    this.getUsers()
+    this.getUserById()
+  },
   computed: {
     ...mapState({
       focusNav: state => state.focusNav,
@@ -57,6 +61,17 @@ export default {
     }),
     changeNav(nav) {
       this.setNav(nav)
+    },
+    async getUsers() {
+      const ret = await this.$base.post('/getUsers', {})
+      console.log(ret)
+    },
+    async getUserById() {
+      const param = {
+        id: 28
+      }
+      const ret = await this.$base.post('/getUser', param)
+      console.log(ret)
     }
   },
   mounted() {

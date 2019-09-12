@@ -1,9 +1,9 @@
 import Vue from 'vue'
+import { $base } from 'utils/http'
 import App from './App.vue'
 // import { Button, message } from 'ant-design-vue'
 import router from './router'
 import store from './store/store'
-// import { $chinapost, $testurl } from 'utils/http'
 
 import 'assets/styles/global.styl'
 import 'assets/fonts/iconfont.css'
@@ -15,8 +15,7 @@ import './ant-design'
 Vue.config.productionTip = false
 
 
-// Vue.prototype.$chinapost = $chinapost
-// Vue.prototype.$testurl = $testurl
+Vue.prototype.$base = $base
 
 new Vue({
   router,

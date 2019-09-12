@@ -1,3 +1,3 @@
 
 
-  export const SET_NAV = 'setNav'
+export const SET_NAV = 'setNav'

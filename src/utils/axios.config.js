@@ -12,8 +12,8 @@ window.APP_CONFIG = {
  */
 const conf = {
   root: {
-    chinapost: {
-      baseURL: '',
+    base: {
+      baseURL: 'http://localhost:8888/',
       timeout: 60000
     },
     testurl: {
