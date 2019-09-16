@@ -13,7 +13,8 @@ window.APP_CONFIG = {
 const conf = {
   root: {
     base: {
-      baseURL: 'http://localhost:8888/',
+      // baseURL: 'http://localhost:8888/',
+      baseURL: '',
       timeout: 60000
     },
     testurl: {

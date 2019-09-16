@@ -96,13 +96,6 @@ function requestInterceptor(conf) {
   // 将post方法的content-type 设置为 application/x-www-form-urlencoded
   if (conf.method === 'post') {
     conf.headers.post['Content-Type'] = 'application/json'
-    const { data } = conf
-    const param = new URLSearchParams()
-    // eslint-disable-next-line
-    for (let key in data) {
-      param.append(key, data[key])
-    }
-    conf.data = param
   }
   return conf
 }
